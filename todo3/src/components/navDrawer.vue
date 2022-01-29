@@ -8,6 +8,7 @@
       
        v-model="drawer"
       permanent
+     
       :mini-variant.sync="mini"
       app
     >
