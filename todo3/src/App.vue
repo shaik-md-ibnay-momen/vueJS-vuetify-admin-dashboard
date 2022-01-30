@@ -1,17 +1,15 @@
 <template>
 <v-app id="inspire" > 
-  <nav-drawer/>
-  <appbar/>
+  <temp/>
 
 </v-app>
 </template>
 
 <script>
 
-import navDrawer from './components/navDrawer.vue'
-import appbar from './components/appbar.vue'
+import Temp from './components/temp.vue'
 
   export default {
-    components: { navDrawer , appbar},
+    components: {  Temp},
   }
 </script>
