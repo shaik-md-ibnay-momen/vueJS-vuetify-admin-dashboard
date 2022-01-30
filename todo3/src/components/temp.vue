@@ -3,10 +3,10 @@
   >
 
      <v-navigation-drawer
-      
-       v-model="drawer"
+      v-model="drawer"
       permanent
       :mini-variant.sync="mini"
+      expand-on-hover
       app
     >
       <v-list-item class="px-2">
@@ -44,7 +44,7 @@
      fixed
       color="#fcb69f"
       dark
-      src="https://www.bkash.com/app/img/bg/app-welcome-banner-desktop.jpg"
+      src="https://www.bkash.com/app/img/bg/app-welcome-banner-desktop.jpg"  
     >
       <template v-slot:img="{ props }">
         <v-img
@@ -53,7 +53,7 @@
         ></v-img>
       </template>
 
-      <v-app-bar-nav-icon @click.stop="mini = !mini"></v-app-bar-nav-icon>
+     
 
       <v-app-bar-title><h3>Bkash</h3></v-app-bar-title>
 
@@ -63,9 +63,7 @@
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
-      <v-btn icon>
-        <v-icon>mdi-bell-ring</v-icon>
-      </v-btn>
+      <Notification/>
 
        <v-menu
         
@@ -93,17 +91,30 @@
 
     </v-app-bar>
     <v-sheet
+      id="scrolling-techniques-3"
+      class="overflow-y-auto "
+      max-height="600"
     >
-      <v-container style="height: 1000px;"></v-container>
+      <v-container style="height: 1000px;"
+       class="slideDown"
+      >
+      shahha
+      </v-container>
     </v-sheet>
   </v-card>
 </template>
 
 <script>
+
+
+import Notification from './notification.vue'
+
 export default {
+components: { Notification},
+
 data () {
       return {
-        drawer: true,
+        drawer: null,
         items: [
           { title: 'Home', icon: 'mdi-home-city' },
           { title: 'My Account', icon: 'mdi-account' },
@@ -114,3 +125,11 @@ data () {
     },
 }
 </script>
+
+<style lang="sass">
+
+ .container.slideDown
+      margin-top: 100px !important
+      margin-left: 56px  !important 
+
+</style>
