@@ -58,10 +58,23 @@
       <v-app-bar-title><h3>Bkash</h3></v-app-bar-title>
 
       <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
+        
+          <v-text-field
+            @focus="searchClosed=false"
+            @blur="searchClosed=true"
+            v-model="srch"
+            class="mt-7 expending-search"
+            :class="{'closed': searchClosed && !srch}"
+            placeholder="Search"
+            filled
+            rounded
+            dark
+            dense
+            clearable
+            prepend-inner-icon="mdi-magnify"
+            background-color="red"
+          >
+          </v-text-field>
 
       <Notification/>
 
@@ -90,17 +103,20 @@
       </v-menu>
 
     </v-app-bar>
-    <v-sheet
-      id="scrolling-techniques-3"
-      class="overflow-y-auto "
-      max-height="600"
-    >
-      <v-container style="height: 1000px;"
-       class="slideDown"
-      >
-      shahha
+   <v-main>
+      <v-container>
+        <v-row>
+          <v-col
+            v-for="n in 24"
+            :key="n"
+            cols="4"
+          >
+            <v-card height="200"></v-card>
+          </v-col>
+        </v-row>
       </v-container>
-    </v-sheet>
+    </v-main>
+  
   </v-card>
 </template>
 
@@ -113,7 +129,10 @@ export default {
 components: { Notification},
 
 data () {
+  
       return {
+        srch: null,
+        searchClosed: true,
         drawer: null,
         items: [
           { title: 'Home', icon: 'mdi-home-city' },
@@ -131,5 +150,15 @@ data () {
  .container.slideDown
       margin-top: 100px !important
       margin-left: 56px  !important 
+      box-shadow: none !important
+
+.v-input.closed
+    max-width: 55px !important
+    .v-input__slot
+      background: transparent !important
+.v-input.expending-search
+    transition: max-width 0.5s
+    .v-input__slot
+      cursor: pointer !important
 
 </style>
