@@ -163,7 +163,7 @@ data () {
       background: transparent !important
 .v-input.expending-search
     transition: max-width 0.5s
-    max-width: 500px
+    max-width: 35%
     .v-input__slot
       cursor: pointer !important
 .col-3

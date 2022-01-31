@@ -10,15 +10,18 @@
             :key="i"
           >
             <v-card 
+            
             elevation="3"
             hover
-            rounded
-            height="200" color= "#C2185B">
+            height="150" color= "#C2185B">
             
-          
-            <v-card-title>{{ item.title }}</v-card-title>
-            <v-icon>{{ item.icon }}</v-icon>
+           <v-row> 
+        <v-icon>{{ item.icon }}</v-icon>
+        <v-card-title>{{ item.title }}</v-card-title>
+</v-row>
            <v-card-text>{{ item.number}}</v-card-text>
+        
+           
             
             </v-card>
           </v-col>
@@ -28,6 +31,7 @@
 </template>
 
 <script>
+
 
 
 export default {
@@ -49,14 +53,31 @@ data () {
 </script>
 
 <style lang="sass">
+
+
 .v-card__title
   color: white
-  font-size: 28px !important
-  text-align: justify-center !important
+  font-size: 22px !important
+  
 
 .theme--light.v-icon
+  padding: 15px
   display: flex
-  font-size: 50px
+  font-size:32px
   color: white
-  justify-content: center !important
+  justify-content: left !important
+
+.row
+ .v-sheet.v-card
+   border-radius: 20px
+ .row
+   align-content: center
+   margin: 0px
+ .v-card__text
+    text-align: center
+    color: white !important
+    font-size: 40px
+    font-weight: bold
+
+
 </style>
