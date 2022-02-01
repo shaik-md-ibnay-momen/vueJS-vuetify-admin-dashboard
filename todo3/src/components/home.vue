@@ -21,7 +21,7 @@
           </v-col>
 
               <timeline/>
-
+              <graph/>
               
         </v-row>
       </v-container>
@@ -31,9 +31,9 @@
 <script>
 
 import timeline from './timeline.vue'
-
+import graph from './graph.vue'
 export default {
-components: { timeline},
+components: { timeline, graph},
 data () {
   
       return {
