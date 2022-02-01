@@ -6,7 +6,7 @@
       v-model="drawer"
       permanent
       :mini-variant.sync="mini"
-      expand-on-hover
+       expand-on-hover
       app
       dark
     >
@@ -29,11 +29,11 @@
           link
         >
           <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon >{{ item.icon }}</v-icon>
           </v-list-item-icon>
 
           <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
+            <v-list-item-title >{{ item.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -64,7 +64,7 @@
       <template v-slot:img="{ props }">
         <v-img
           v-bind="props"
-          gradient="to top right, rgba(236, 64, 122, 1), rgba(136, 14, 79, 1)"
+          gradient="to top right, rgba(220, 20, 60, 1),rgba(220, 20, 60, 1)"
         ></v-img>
       </template>
 
@@ -87,7 +87,7 @@
             dense
             clearable
             prepend-inner-icon="mdi-magnify"
-            background-color="#880E4F"
+            background-color="#b70b20"
           >
           </v-text-field>
 
@@ -171,4 +171,16 @@ data () {
 
 .v-app-bar-title__content
    text-shadow: 5px 5px 7px #880E4F
+
+.v-application .px-2
+   background-color: crimson
+   height: 100px
+   .v-list-item__title
+     font-size: 25px
+     font-weight: bold
+
+.v-list-item__content
+  .v-list-item__title
+     font-size: 15px !important
+     font-weight: bold
 </style>
