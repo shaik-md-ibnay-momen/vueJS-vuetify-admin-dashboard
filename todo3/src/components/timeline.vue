@@ -1,10 +1,10 @@
 <template>
-    
-          <v-timeline
+    <v-card class="mt-4 pt-3 pr-3 cardsize">
+         
+    <v-timeline
       dense
       clipped
     >
-    <v-card class="pt-8 pr-8">
       <v-timeline-item
         fill-dot
         class="white--text mb-12"
@@ -172,6 +172,21 @@
           </v-col>
         </v-row>
       </v-timeline-item>
-      </v-card>
     </v-timeline>
+    </v-card>
+  
 </template>
+
+<script>
+
+export default {
+  
+  
+}
+</script>
+
+<style lang="sass">
+.cardsize
+   max-width: 40% !important
+
+</style>

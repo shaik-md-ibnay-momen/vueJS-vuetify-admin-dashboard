@@ -20,11 +20,18 @@
             </v-card>
           </v-col>
 
-              <timeline/>
-              <graph/>
+          <v-container >
+                 <graph/>
+                 <div class="graphDisplay2">
+                 <graph2/>
+                  <timeline/>
+              </div>
+               </v-container>
+               <v-spacer></v-spacer>
+             </v-row>
               
-        </v-row>
-      </v-container>
+         </v-container>
+      
     </v-main>
 </template>
 
@@ -32,8 +39,10 @@
 
 import timeline from './timeline.vue'
 import graph from './graph.vue'
+import graph2 from './graph2.vue'
+
 export default {
-components: { timeline, graph},
+components: { timeline, graph,graph2},
 data () {
   
       return {
@@ -81,9 +90,10 @@ data () {
 .backgroundimage
     background: url('../assets/aiback.jpg') center center fixed !important
     background-size: cover
-    
-.v-timeline
-  .v-card
-     max-width: 75%
 
+.graphDisplay2
+   max-width: 100%
+   display: flex
+   justify-content: space-around
+   padding-top: 24px
 </style>
