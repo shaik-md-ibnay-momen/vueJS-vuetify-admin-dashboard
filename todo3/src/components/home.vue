@@ -23,11 +23,17 @@
           <v-container >
                  <graph/>
                  <div class="graphDisplay2">
-                 <graph2/>
+                   <v-col class="colheight">
+
+<graph2/>
+
+ <graph2/>
+                   </v-col>
+                 
                   <timeline/>
                   
               </div>
-              <graph2/>
+             
                </v-container>
                <v-spacer></v-spacer>
              </v-row>
@@ -98,4 +104,7 @@ data () {
    display: flex
    justify-content: space-between
    padding-top: 24px
+
+.colheight
+   width: 50%
 </style>
