@@ -187,6 +187,6 @@ export default {
 
 <style lang="sass">
 .cardsize
-   max-width: 40% !important
+   max-width: 48% !important
 
 </style>

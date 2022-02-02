@@ -1,7 +1,8 @@
 <template>
-  <v-card class="mt-4 pt-4 mb-4 gridsize">
+  <v-card class="mt-4 pt-4 pr-4 gridsize" :elevation="4">
    <apexchart 
-      height="350" type="pie" 
+   
+      height="300" type="pie" 
      :options="options" :series="series">
    </apexchart>  
 </v-card>
@@ -36,5 +37,8 @@ export default {
 
 <style lang="sass">
 .gridsize
-  max-width: 40% !important
+  
+  justify-content: center
+
+  width: 48% !important
 </style>

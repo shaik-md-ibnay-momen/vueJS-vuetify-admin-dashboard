@@ -25,7 +25,9 @@
                  <div class="graphDisplay2">
                  <graph2/>
                   <timeline/>
+                  
               </div>
+              <graph2/>
                </v-container>
                <v-spacer></v-spacer>
              </v-row>
@@ -94,6 +96,6 @@ data () {
 .graphDisplay2
    max-width: 100%
    display: flex
-   justify-content: space-around
+   justify-content: space-between
    padding-top: 24px
 </style>
