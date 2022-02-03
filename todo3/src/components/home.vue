@@ -1,13 +1,14 @@
 <template>
     <v-main class="backgroundimage">
-      <v-container>
+      <v-container class="ml-11 rowsize">
         <v-row>
           <v-col
+          
             cols="4"
-            class="mt-8"
-
+            class="mt-8 cardsize"
             v-for="(item, i) in items"
             :key="i"
+            
           >
             <v-card 
                color= "#C2185B">     
@@ -19,7 +20,7 @@
             
             </v-card>
           </v-col>
-
+<timeline/>
           <v-container >
                  <graph/>
                  <div class="graphDisplay2">
@@ -30,7 +31,7 @@
  <graph2/>
                    </v-col>
                  
-                  <timeline/>
+                  
                   
               </div>
              
@@ -58,6 +59,7 @@ data () {
         items: [
           { title: 'Home', icon: 'mdi-home-city', number: '1500' },
           { title: 'My Account', icon: 'mdi-account' , number: '3500'},
+          { title: 'Users', icon: 'mdi-account-group-outline', number: '1980' },
           { title: 'Users', icon: 'mdi-account-group-outline', number: '1980' },
          
         ],
@@ -97,7 +99,7 @@ data () {
     font-weight: bold
 .backgroundimage
     background: url('../assets/aiback.jpg') center center fixed !important
-    background-size: cover
+    background-width: 95%
 
 .graphDisplay2
    max-width: 100%
@@ -107,4 +109,8 @@ data () {
 
 .colheight
    width: 50%
+.rowsize
+   max-width: 95%
+.cardsize
+   max-width: 25% !important
 </style>

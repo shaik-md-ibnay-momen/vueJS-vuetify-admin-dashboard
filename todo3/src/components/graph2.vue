@@ -4,7 +4,6 @@
       height="300" type="pie" 
      :options="options" :series="series">
    </apexchart>  
-   <h3>shdfk</h3>
 </v-card>
 </template>
 
@@ -40,6 +39,6 @@ export default {
 
   
   justify-content: center
-  height: 50% !important
+  
   
 </style>
