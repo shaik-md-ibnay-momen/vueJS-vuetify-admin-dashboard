@@ -20,18 +20,14 @@
             
             </v-card>
           </v-col>
-<timeline/>
+         <timeline/>
           <v-container >
                  <graph/>
                  <div class="graphDisplay2">
                    <v-col class="colheight">
-
-<graph2/>
-
- <graph2/>
+                        <graph2/>
+                       <graph2/>
                    </v-col>
-                 
-                  
                   
               </div>
              
