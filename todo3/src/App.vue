@@ -6,9 +6,7 @@
 </template>
 
 <script>
-
 import Temp from './components/temp.vue'
-
   export default {
     components: {  Temp},
   }
