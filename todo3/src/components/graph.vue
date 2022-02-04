@@ -2,6 +2,7 @@
   <v-card class="pa-3 size">
    <apexchart 
      height='220px' type="area" 
+    class="chartclass"
      :options="options" :series="series">
    </apexchart>  
  </v-card>
@@ -50,6 +51,14 @@ export default {
 <style lang="sass">
 .size
   height: 250px !important
+  display: flex
+  justify-content: center
+
+.chartclass
+  margin: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
 </style>
 
 

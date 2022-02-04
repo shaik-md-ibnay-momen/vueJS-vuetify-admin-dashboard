@@ -1,12 +1,11 @@
 <template>
   <v-card class="pa-3 size">
-      <v-row>
-   <apexchart 
-     height='250px'  type="radialBar" 
+   <apexchart
+     height='250px'  type="radialBar"
+
      :options="options" :series="series">
    </apexchart>  
 
-   </v-row>
  </v-card>
 </template>
 
@@ -109,4 +108,12 @@ components: {
 <style lang="sass">
 .size
   height: 250px !important
+  display: flex
+  justify-content: center
+
+.chartclass
+  margin: 0
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
 </style>
