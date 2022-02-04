@@ -3,7 +3,6 @@
       <v-container class="ml-11 rowsize">
         <v-row>
           <v-col
-          
             cols="4"
             class="mt-8 cardsize"
             v-for="(item, i) in items"
@@ -20,17 +19,22 @@
             
             </v-card>
           </v-col>
-         <timeline/>
+        
           <v-container >
-                 <graph/>
+            <v-row class="row1 pb-3">
+              <div class="div1 pr-3"><graph/></div>
+              <div class="div1 pl-3 pr-3"><graph2/></div>
+               <div class="div1 pl-3"><graph3/></div>
+            </v-row>
+                 
                  <div class="graphDisplay2">
                    <v-col class="colheight">
                         <graph2/>
                        <graph2/>
                    </v-col>
-                  
+                  <timeline/>
               </div>
-             
+              
                </v-container>
                <v-spacer></v-spacer>
              </v-row>
@@ -45,9 +49,10 @@
 import timeline from './timeline.vue'
 import graph from './graph.vue'
 import graph2 from './graph2.vue'
+import graph3 from './graph3.vue'
 
 export default {
-components: { timeline, graph,graph2},
+components: { timeline, graph,graph2, graph3},
 data () {
   
       return {
@@ -96,17 +101,28 @@ data () {
 .backgroundimage
     background: url('../assets/aiback.jpg') center center fixed !important
     background-width: 95%
-
+    justify-content: center
 .graphDisplay2
    max-width: 100%
    display: flex
    justify-content: space-between
-   padding-top: 24px
+
 
 .colheight
    width: 50%
+   padding-left: 0px !important 
 .rowsize
    max-width: 95%
 .cardsize
    max-width: 25% !important
+
+.div1
+   width: 33% !important
+
+.row1
+   display: flex
+   justify-content: space-between
+   flex-direction: row
+
+
 </style>

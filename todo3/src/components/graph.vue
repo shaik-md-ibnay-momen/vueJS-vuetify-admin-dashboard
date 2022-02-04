@@ -1,7 +1,7 @@
 <template>
-  <v-card class="pa-3">
+  <v-card class="pa-3 size">
    <apexchart 
-     width="100%" height="250" type="area" 
+     height='220px' type="area" 
      :options="options" :series="series">
    </apexchart>  
  </v-card>
@@ -9,12 +9,16 @@
 
 <script>
 export default {
+  
   name: 'HelloWorld',
   data: () => ({
     options: {
       chart: {
         id: 'vuechart-example'
       },
+
+    
+
       xaxis: {
         categories: [
          "Jan",
@@ -43,7 +47,10 @@ export default {
 }
 </script>
     
-
+<style lang="sass">
+.size
+  height: 250px !important
+</style>
 
 
  
