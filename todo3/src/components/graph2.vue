@@ -1,7 +1,7 @@
 <template>
   <v-card class="pa-3 size" >
    <apexchart 
-      height='400px' type="pie" 
+      height='400px' width="120%" type="pie" 
       class="chartclass"
      :options="options" :series="series">
    </apexchart>  

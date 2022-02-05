@@ -1,5 +1,5 @@
 <template>
-    <v-card class="mt-4 pt-3 pr-3 cardsize">
+    <v-card class="mt-4 pt-3 pr-3 tcardsize">
          
     <v-timeline
       dense
@@ -186,7 +186,7 @@ export default {
 </script>
 
 <style lang="sass">
-.cardsize
-   max-width: 48% !important
+.tcardsize
+   max-width: 100% !important
 
 </style>

@@ -20,23 +20,23 @@
             </v-card>
           </v-col>
         
-          <v-container >
+          <v-container class="graphcontainer">
             <v-row class="row1 pb-3">
-              <div class="div1 pr-3"><graph/></div>
+              <div class="div1 pr-3"><graph-4/></div>
               <div class="div1 pl-3 pr-3"><graph2/></div>
                <div class="div1 pl-3"><graph3/></div>
             </v-row>
                  
                  <div class="graphDisplay2">
                    <v-col class="colheight">
-                        <graph2/>
-                       <graph2/>
+                     <div class="div2  pr-3 mb-6"><graph/></div>
+                     <div class="div2  pr-3"><graph2/></div>
+
                    </v-col>
                   <timeline/>
               </div>
               
                </v-container>
-               <v-spacer></v-spacer>
              </v-row>
               
          </v-container>
@@ -50,9 +50,10 @@ import timeline from './timeline.vue'
 import graph from './graph.vue'
 import graph2 from './graph2.vue'
 import graph3 from './graph3.vue'
+import graph4 from './graph4.vue'
 
 export default {
-components: { timeline, graph,graph2, graph3},
+components: { timeline, graph,graph2, graph3, graph4},
 data () {
   
       return {
@@ -102,6 +103,7 @@ data () {
     background: url('../assets/aiback.jpg') center center fixed !important
     background-width: 95%
     justify-content: center
+    
 .graphDisplay2
    max-width: 100%
    display: flex
@@ -109,7 +111,7 @@ data () {
 
 
 .colheight
-   width: 50%
+   max-width: 50% !important
    padding-left: 0px !important 
 .rowsize
    max-width: 95%
@@ -118,11 +120,13 @@ data () {
 
 .div1
    width: 33% !important
-
+.div2
+   width: 100% !important
 .row1
    display: flex
    justify-content: space-between
    flex-direction: row
 
-
+.graphcontainer
+   max-width: 100%
 </style>
