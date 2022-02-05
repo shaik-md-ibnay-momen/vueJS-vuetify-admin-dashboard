@@ -10,13 +10,11 @@
 </template>
 
 <script>
-import VueApexCharts from 'vue-apexcharts'
+
 
 export default {
 
-components: {
-          apexchart: VueApexCharts,
-        },
+
     
   data: () => ({
     series: [
@@ -127,6 +125,19 @@ components: {
           ],
           options: {
             chart: {
+               animations: {
+        enabled: true,
+        easing: 'easeinout',
+        speed: 800,
+        animateGradually: {
+            enabled: true,
+            delay: 300
+        },
+        dynamicAnimation: {
+            enabled: true,
+            speed: 350
+        }
+    },
               height: 220,
               type: 'bar'
             },

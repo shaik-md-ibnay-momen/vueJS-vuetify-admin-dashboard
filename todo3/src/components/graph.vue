@@ -17,9 +17,6 @@ export default {
       chart: {
         id: 'vuechart-example'
       },
-
-    
-
       xaxis: {
         categories: [
          "Jan",
