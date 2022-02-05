@@ -27,14 +27,7 @@
                <div class="div1 pl-3"><graph3/></div>
             </v-row>
                  
-                 <div class="graphDisplay2">
-                   <v-col class="colheight">
-                     <div class="div2  pr-3 mb-6"><graph/></div>
-                     <div class="div2  pr-3"><graph2/></div>
-
-                   </v-col>
-                  <timeline/>
-              </div>
+    
               
                </v-container>
              </v-row>
@@ -46,15 +39,14 @@
 
 <script>
 
-import timeline from './timeline.vue'
-import graph from './graph.vue'
+
 import graph2 from './graph2.vue'
 import graph3 from './graph3.vue'
 import graph4 from './graph4.vue'
 import animnum from './animatednumber.vue'
 
 export default {
-components: { timeline, graph,graph2, graph3, graph4, animnum},
+components: { graph2, graph3, graph4, animnum},
 data () {
   
       return {

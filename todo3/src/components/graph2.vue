@@ -1,7 +1,7 @@
 <template>
   <v-card class="pa-3 size" >
    <apexchart 
-      height='400px' width="120%" type="pie" 
+      height='250px' width="105%" type="pie" 
       class="chartclass"
      :options="options" :series="series">
    </apexchart>  
@@ -26,7 +26,7 @@ export default {
 </script>
 <style lang="sass">
 .size
-  height: 350px !important
+  height: 250px !important
   display: flex
   justify-content: center
 .chartclass

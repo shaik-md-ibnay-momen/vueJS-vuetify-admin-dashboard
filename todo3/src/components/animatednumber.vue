@@ -1,26 +1,48 @@
 <template>
-  <div>
-    <animated-number :value="value" :formatValue="formatToPrice" :duration="duration"/>
-    <hr>
+  <div class="iCountUp">
+    <ICountUp
+      :delay="delay"
+      :endVal="endVal"
+      :options="options"
+      @ready="onReady"
+    />
   </div>
 </template>
-<script>
-import AnimatedNumber from "animated-number-vue";
 
-export default {
-  components: {
-    AnimatedNumber
-  },
-  data() {
-    return {
-      value: 10000,
-      duration: 1000
-    };
-  },
-  methods: {
-    formatToPrice(value) {
-      return `<h3>$ ${Number(value).toFixed(2)}</h1>`;
+<script type="text/babel">
+  import ICountUp from 'vue-countup-v2';
+  export default {
+    name: 'demo',
+    components: {
+      ICountUp
     },
-  }
-};
+    data() {
+      return {
+        delay: 1000,
+        endVal: 120500,
+        options: {
+          useEasing: true,
+          useGrouping: true,
+          separator: ',',
+          decimal: '.',
+          prefix: '',
+          suffix: ''
+        }
+      };
+    },
+    methods: {
+      onReady: function(instance) {
+        const that = this;
+        instance.update(that.endVal + 100);
+      }
+    }
+  };
 </script>
+
+<style scoped>
+  .iCountUp {
+    font-size: 1em;
+    margin: 0;
+    color: white;
+  }
+</style>

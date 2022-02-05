@@ -187,6 +187,6 @@ export default {
 
 <style lang="sass">
 .tcardsize
-   max-width: 100% !important
+   max-width: 50% !important
 
 </style>
