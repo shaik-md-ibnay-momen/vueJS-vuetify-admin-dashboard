@@ -15,7 +15,7 @@
         <v-icon>{{ item.icon }}</v-icon>
         <v-card-title>{{ item.title }}</v-card-title>
 </v-row>
-           <v-card-text>{{ item.number}}</v-card-text>
+           <v-card-text><animnum/></v-card-text>
             
             </v-card>
           </v-col>
@@ -51,9 +51,10 @@ import graph from './graph.vue'
 import graph2 from './graph2.vue'
 import graph3 from './graph3.vue'
 import graph4 from './graph4.vue'
+import animnum from './animatednumber.vue'
 
 export default {
-components: { timeline, graph,graph2, graph3, graph4},
+components: { timeline, graph,graph2, graph3, graph4, animnum},
 data () {
   
       return {
@@ -103,7 +104,7 @@ data () {
     background: url('../assets/aiback.jpg') center center fixed !important
     background-width: 95%
     justify-content: center
-    
+
 .graphDisplay2
    max-width: 100%
    display: flex
