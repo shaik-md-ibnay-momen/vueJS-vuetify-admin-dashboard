@@ -1,6 +1,6 @@
 <template>
   <v-menu
-      transition="slide-y-transition"
+      transition="slide-x-transition"
       bottom
     >
       <template v-slot:activator="{ on, attrs }">

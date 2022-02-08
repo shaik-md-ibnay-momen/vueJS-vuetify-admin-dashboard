@@ -135,9 +135,13 @@
             background-color="#b70b20"
           >
           </v-text-field>
-
-      <Notification/>
        
+      <Notification/>
+      <Calendar/>
+
+ 
+
+
        <v-menu
         
       >
@@ -174,9 +178,10 @@
 
 
 import Notification from './components/notification.vue'
+import Calendar from './components/calendar.vue'
 
 export default {
-components: { Notification},
+components: { Notification, Calendar},
 
 data () {
   
