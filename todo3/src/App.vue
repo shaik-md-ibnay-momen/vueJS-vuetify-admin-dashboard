@@ -27,7 +27,7 @@
       <v-list class="listcurve" >
 
         <v-list-item
-          v-for="item in items"
+          v-for="item in items.slice(0,3)"
           :key="item.title"
           dark
           link
@@ -81,6 +81,26 @@
         </v-list-item>
  
     </v-menu>
+
+    <div class="slimbar"></div>
+
+    <v-list-item
+          v-for="item in items.slice(3,4)"
+          :key="item.title"
+          dark
+          link
+          class="activeitem"
+          router :to="item.link"
+        >
+          <v-list-item-icon>
+            <v-icon color="#f21151" >{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title >{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
       </v-list>
       <template v-slot:append>
         <div class="pa-6"
@@ -193,6 +213,7 @@ data () {
           { title: 'Home', icon: 'mdi-home-city', link: '/' },
           { title: 'My Account', icon: 'mdi-account', link: '/About' },
           { title: 'Users', icon: 'mdi-account-group-outline', link: '/About' },
+          { title: 'Assign Task', icon: 'mdi-clipboard-clock', link: '/TaskForm' },
          
         ],
         items2: [
