@@ -1,6 +1,7 @@
 <template>
     <v-main class="backgroundimage">
-            <v-container class="ml-11 rowsize">
+            <v-container class="ml-11 mt-11 rowsize ">
+        <v-card>
         <v-form>
             <v-container class="py-0">
               <v-row>
@@ -108,13 +109,15 @@
                     color="success"
                     class="mr-0"
                   >
-                    Update Profile
+                    Assign Task
                   </v-btn>
                 </v-col>
               </v-row>
             </v-container>
           </v-form>
+          </v-card>
           </v-container>
+          
               </v-main>
             
 </template>
