@@ -1,8 +1,28 @@
 <template>
-    <v-main class="backgroundimage">
-            <v-container class="ml-11 mt-11 rowsize ">
-        <v-card>
-        <v-form>
+ <v-main class="backgroundimage">
+  <v-container
+    id="user-profile"
+    fluid
+    tag="section"
+    class="ml-11 mt-11 rowsize"
+  >
+    <v-row justify="center">
+      <v-col
+        cols="12"
+        md="8"
+      >
+        
+          <template v-slot:heading>
+            <div class="display-2 font-weight-light">
+              Edit Profile
+            </div>
+
+            <div class="subtitle-1 font-weight-light">
+              Complete your profile
+            </div>
+          </template>
+
+          <v-form>
             <v-container class="py-0">
               <v-row>
                 <v-col
@@ -109,15 +129,21 @@
                     color="success"
                     class="mr-0"
                   >
-                    Assign Task
+                    Update Profile
                   </v-btn>
                 </v-col>
               </v-row>
             </v-container>
           </v-form>
-          </v-card>
-          </v-container>
-          
-              </v-main>
-            
+
+      </v-col>
+    </v-row>
+  </v-container>
+  </v-main>
 </template>
+
+<script>
+  export default {
+    //
+  }
+</script>
