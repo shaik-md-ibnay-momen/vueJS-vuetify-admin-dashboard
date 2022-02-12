@@ -13,7 +13,7 @@
     class="purple-input textareacss"
       v-model="email"
       :rules="emailRules"
-      label="E-mail"
+      label="E-mail or Username"
       required
       filled
       rounded
@@ -21,13 +21,15 @@
       dense
       clearable
       background-color="#B71C1C"
+      prepend-inner-icon="mdi-email"
     ></v-text-field>
 
     <v-text-field
       class="purple-input textareacss"
-      v-model="name"
+      v-model="password"
       :rules="nameRules"
-      label="Name"
+      label="Password"
+      type="password"
       required
       filled
       rounded
@@ -35,14 +37,15 @@
       dense
       clearable
       background-color="#B71C1C"
+      prepend-inner-icon="mdi-lock"
     ></v-text-field>
 
     <v-btn
       color="error"
       class="mr-4"
-      @click="reset"
+      @click="validate"
     >
-      Reset Form
+      Sign IN
     </v-btn>
 
     </v-container>
@@ -91,13 +94,12 @@
     valid: true,
     name: '',
     nameRules: [
-      v => !!v || 'Name is required',
+      v => !!v || 'Password is required',
       
     ],
     email: '',
     emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+      v => !!v || 'E-mail or Username is required',
     ],
     icons: [
         'mdi-facebook',
@@ -110,12 +112,6 @@
       methods: {
     validate () {
       this.$refs.form.validate()
-    },
-    reset () {
-      this.$refs.form.reset()
-    },
-    resetValidation () {
-      this.$refs.form.resetValidation()
     },
   },
   }
