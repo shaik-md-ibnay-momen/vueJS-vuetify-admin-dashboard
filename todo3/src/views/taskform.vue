@@ -1,5 +1,6 @@
 <template>
  <v-main class="backgroundimage">
+   <v-vard>
   <v-container
     id="user-profile"
     fluid
@@ -139,6 +140,7 @@
       </v-col>
     </v-row>
   </v-container>
+  </v-vard>
   </v-main>
 </template>
 

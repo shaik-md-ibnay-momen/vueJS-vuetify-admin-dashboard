@@ -16,6 +16,7 @@
     "vue-animation": "^0.1.0",
     "vue-apexcharts": "^1.6.2",
     "vue-countup-v2": "^4.0.0",
+    "vue-material": "^1.0.0-beta-15",
     "vue-number-animation": "^1.1.1",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",

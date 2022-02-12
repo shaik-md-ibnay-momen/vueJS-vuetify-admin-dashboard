@@ -207,7 +207,7 @@ data () {
         items: [
           { title: 'Home', icon: 'mdi-home-city', link: '/' },
           { title: 'My Account', icon: 'mdi-account', link: '/About' },
-          { title: 'Users', icon: 'mdi-account-group-outline', link: '/About' },
+          { title: 'Users', icon: 'mdi-account-group-outline', link: '/Login' },
           { title: 'Assign Task', icon: 'mdi-clipboard-clock', link: '/TaskForm' },
          
         ],
