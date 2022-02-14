@@ -4,7 +4,6 @@
       :close-on-content-click="false"
       :nudge-width="200"
       offset-x
-
     >
        <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -17,7 +16,7 @@
       </template>
   <v-row class="fill-height">
     <v-col>
-      <v-sheet height="64">
+      <v-sheet height="64" >
         <v-toolbar
           flat
         >
